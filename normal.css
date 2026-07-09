@@ -1,0 +1,36 @@
+body {margin: 0; padding: 0;}
+
+ul,ul>li {margin: 0; list-style: none; padding: 0;}
+p {
+    margin: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: inherit;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    /* 클릭범위 확인 ↓ */
+    /* background-color: pink; */
+    /* ↓ a태그에는 주로 dlsplay: inline;(불필요한 여백값이있기 때문에)속성대신 
+    대체적으로 display: block; 사용  
+    
+    dlsplay: inline; (여백, 좌표 고정 => 해결 :  display 속성값 변경)
+    -> mark, span, a, img -> 역할, 특징이 있는 속성(이므로 inline이 들어갈 경우 불필요한 요소가 많음)
+    nav, header -> 의미만 부여 */
+    display: block;
+
+}
+button {
+    background-color: transparent;
+    padding: auto;
+    border: none; outline: none;
+}
+
+img {
+    /* background-color: red; */
+    display: block;
+}

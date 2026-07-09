@@ -1,0 +1,128 @@
+/* header {
+  border: 1px solid red;
+} */
+/* 상단바-유틸리티바 */
+/* .utillity-bar {
+  border: 1px solid orange;
+} */
+
+.ut-menu01-ul {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 60px;
+  background: var(--color-azure-405, rgba(88, 98, 118, 0.05));
+}
+.ut-m01-item {
+  padding-bottom: 4px; padding-top: 4px;
+  padding-left: 12px; padding-right: 12px;
+  color: var(--www-miricanvas-com-shark, var(--color-grey-15, #23242A));
+  text-align: center;
+  /* www.miricanvas.com/Pretendard Variable/Medium */
+  font-family: var(--font-family-Font-1, "Pretendard Variable");
+  font-size: var(--font-size-14, 14px);
+  font-style: normal;
+  font-weight: var(--font-weight-500, 500);
+  line-height: var(--line-height-20, 20px); /* 142.857% */
+}
+.ut-m01-item01 {
+  background-color: #fff;
+}
+/* 상단바-탑바 */
+.top-bar {
+  /* background-color: orange; */
+  border-bottom: 1px solid #EFF0F2;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 60px; padding-left: 60px;
+  height: calc(12px + 60px);
+}
+.top-bar-lt {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  height: 100%;
+}
+/* 상단바-탑바-로고 */
+.logo-box {
+  /* border: 1px solid green; */
+  align-self: center;
+}
+/* 상단바-탑바-메뉴 */
+.menu01 {
+  /* border: 1px solid green; */
+}
+.menu01-ul {
+  display: flex;
+  align-items: center;
+}
+.m01-item {
+  padding-bottom: 10px; padding-top: 10px;
+  padding-left: 16px; padding-right: 16px;
+
+  /* 폰트 */
+  align-items: center;
+  color: var(--www-miricanvas-com-shark, var(--color-grey-15, #23242A));
+  text-align: center;
+  /* www.miricanvas.com/Pretendard Variable/Medium */
+  font-family: var(--font-family-Font-1, "Pretendard Variable");
+  font-size: var(--font-size-14, 14px);
+  font-style: normal;
+  font-weight: var(--font-weight-500, 500);
+  line-height: var(--line-height-20, 20px); /* 142.857% */
+}
+
+/* 🌟  [여기 수정] 글자 링크 태그 자체를 flex로 만듭니다 */
+.m01-item > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px; /* 👈 글자와 화살표 사이 간격 조절 */
+}
+.m01-item07 {
+  color: #EFF0F2;
+  text-align: center;
+}
+/* 상단바-탑바-유저 */
+.top-bar-rt {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.user-box {
+  /* border: 1px solid green; */
+  display: flex;
+  align-self: center;
+  padding-right: 56px;
+}
+.log-in {
+  padding-bottom: 10px; padding-top: 10px;
+  padding-left: 16px; padding-right: 16px;
+
+  /* 폰트 */
+  color: var(--www-miricanvas-com-shark, var(--color-grey-15, #23242A));
+  text-align: center;
+
+  /* www.miricanvas.com/Pretendard Variable/Medium */
+  font-family: var(--font-family-Font-1, "Pretendard Variable");
+  font-size: var(--font-size-14, 14px);
+  font-style: normal;
+  font-weight: var(--font-weight-500, 500);
+  line-height: var(--line-height-20, 20px); /* 142.857% */
+}
+.user-box > a {
+  border-radius: 8px;
+  background: var(--color-cyan-44, #21AFBF);
+  color: aliceblue;
+  padding-bottom: 10px; padding-top: 10px;
+  padding-left: 16px; padding-right: 16px;
+
+  /* 폰트 */
+  color: var(--beautyofjoseon-co-kr-white, var(--pc-category-bg-color, #FFF));
+  text-align: center;
+
+  /* www.miricanvas.com/Pretendard Variable/Medium */
+  font-family: var(--font-family-Font-1, "Pretendard Variable");
+  font-size: var(--font-size-14, 14px);
+  font-style: normal;
+  font-weight: var(--font-weight-500, 500);
+  line-height: var(--line-height-20, 20px); /* 142.857% */
+}
