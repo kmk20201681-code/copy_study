@@ -18,11 +18,15 @@
   color: var(--www-miricanvas-com-shark, var(--color-grey-15, #23242A));
   text-align: center;
   /* www.miricanvas.com/Pretendard Variable/Medium */
-  font-family: var(--font-family-Font-1, "Pretendard Variable");
+  font-family: var(--font-family-Font-1, "Pretendard");
   font-size: var(--font-size-14, 14px);
   font-style: normal;
   font-weight: var(--font-weight-500, 500);
   line-height: var(--line-height-20, 20px); /* 142.857% */
+}
+.ut-m01-item:hover {
+  background: var(--color-azure-405, rgba(88, 98, 118, 0.05));
+  text-decoration: underline;
 }
 .ut-m01-item01 {
   background-color: #fff;
@@ -38,7 +42,7 @@
 }
 .top-bar-lt {
   display: flex;
-  gap: 28px;
+  gap: 30px;
   align-items: center;
   height: 100%;
 }
@@ -48,9 +52,9 @@
   align-self: center;
 }
 /* 상단바-탑바-메뉴 */
-.menu01 {
-  /* border: 1px solid green; */
-}
+/* .menu01 {
+  border: 1px solid green;
+} */
 .menu01-ul {
   display: flex;
   align-items: center;
@@ -64,13 +68,16 @@
   color: var(--www-miricanvas-com-shark, var(--color-grey-15, #23242A));
   text-align: center;
   /* www.miricanvas.com/Pretendard Variable/Medium */
-  font-family: var(--font-family-Font-1, "Pretendard Variable");
+  font-family: var(--font-family-Font-1, "Pretendard");
   font-size: var(--font-size-14, 14px);
   font-style: normal;
   font-weight: var(--font-weight-500, 500);
   line-height: var(--line-height-20, 20px); /* 142.857% */
 }
-
+.m01-item:hover {
+  background: var(--color-azure-405, rgba(88, 98, 118, 0.05));
+  border-radius: 8px;
+}
 /* 🌟  [여기 수정] 글자 링크 태그 자체를 flex로 만듭니다 */
 .m01-item > a {
   display: inline-flex;
@@ -102,12 +109,18 @@
   text-align: center;
 
   /* www.miricanvas.com/Pretendard Variable/Medium */
-  font-family: var(--font-family-Font-1, "Pretendard Variable");
+  font-family: var(--font-family-Font-1, "Pretendard");
   font-size: var(--font-size-14, 14px);
   font-style: normal;
   font-weight: var(--font-weight-500, 500);
-  line-height: var(--line-height-20, 20px); /* 142.857% */
+  line-height: var(--line-height-20, 20px); 142.857%
 }
+.log-in:hover {
+  background: var(--color-azure-405, rgba(88, 98, 118, 0.05));
+  border-radius: 8px;
+}
+
+ 
 .user-box > a {
   border-radius: 8px;
   background: var(--color-cyan-44, #21AFBF);
@@ -120,7 +133,7 @@
   text-align: center;
 
   /* www.miricanvas.com/Pretendard Variable/Medium */
-  font-family: var(--font-family-Font-1, "Pretendard Variable");
+  font-family: var(--font-family-Font-1, "Pretendard");
   font-size: var(--font-size-14, 14px);
   font-style: normal;
   font-weight: var(--font-weight-500, 500);
