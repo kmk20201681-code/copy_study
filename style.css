@@ -113,7 +113,7 @@
   font-size: var(--font-size-14, 14px);
   font-style: normal;
   font-weight: var(--font-weight-500, 500);
-  line-height: var(--line-height-20, 20px); 142.857%
+  line-height: var(--line-height-20, 20px); 
 }
 .log-in:hover {
   background: var(--color-azure-405, rgba(88, 98, 118, 0.05));
