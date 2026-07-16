@@ -139,3 +139,74 @@
   font-weight: var(--font-weight-500, 500);
   line-height: var(--line-height-20, 20px); /* 142.857% */
 }
+
+
+
+
+/* 홈페이지 메인  */
+
+.main-box01 {
+  padding-top: 100px ; padding-bottom: 100px;
+  /* padding-left: 606px; padding-right: 606px; */
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  /* background-color: antiquewhite; */
+}
+
+.main-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.main-text01 {
+  text-align: center;
+  color: var(--www-miricanvas-com-woodsmoke, var(--color-azure-10, #16181D));
+  text-align: center;
+  font-family: "Pretendard Variable";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 96px; /* 150% */
+}
+
+.main-text02 {
+  text-align: center;
+
+  /* 글씨체 */
+  color: var(--www-miricanvas-com-woodsmoke, var(--color-azure-10, #16181D));
+  text-align: center;
+  font-family: "Pretendard Variable";
+  font-size: 24px;
+  font-style: normal; 
+  font-weight: 600;
+  line-height: 32px; /* 133.333% */
+}
+
+.main-bt-box {
+  display: flex;
+  gap: 15px;
+}
+
+
+/* 홈페이지 메인 - 메인버튼 */
+.mnbt-start {
+  border-radius: 8px;
+  background: var(--color-cyan-44, #21AFBF);
+  color: aliceblue;
+  padding-bottom: 15px; padding-top: 15px;
+  padding-left: 50px; padding-right: 50px;
+
+}
+.mnbt-template {
+  border-radius: 8px;
+  border: var(--stroke-weight-1, 1px) solid var(--color-cyan-44, #21AFBF);
+  background: var(--pc-category-bg-color, #FFF);
+  color: #21AFBF;
+  padding-bottom: 14px; padding-top: 14px;
+  padding-left: 24px; padding-right: 24px;
+
+}
