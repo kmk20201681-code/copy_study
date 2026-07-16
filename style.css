@@ -31,6 +31,9 @@
 .ut-m01-item01 {
   background-color: #fff;
 }
+
+
+
 /* 상단바-탑바 */
 .top-bar {
   /* background-color: orange; */
@@ -42,15 +45,23 @@
 }
 .top-bar-lt {
   display: flex;
-  gap: 30px;
+  gap: 26px;
   align-items: center;
   height: 100%;
 }
+
+
 /* 상단바-탑바-로고 */
 .logo-box {
   /* border: 1px solid green; */
   align-self: center;
 }
+.logo-box img {
+  width: 140px;  /* 가로 크기 (원하는 픽셀 값이나 %로 조절) */
+  height: auto;  /* 세로 크기는 가로 비율에 맞춰 자동으로 조절되게 합니다 */
+}
+
+
 /* 상단바-탑바-메뉴 */
 /* .menu01 {
   border: 1px solid green;
@@ -60,8 +71,7 @@
   align-items: center;
 }
 .m01-item {
-  padding-bottom: 10px; padding-top: 10px;
-  padding-left: 14px; padding-right: 14px;
+  /* gap: 16px; */
 
   /* 폰트 */
   align-items: center;
@@ -82,12 +92,34 @@
 .m01-item > a {
   display: inline-flex;
   align-items: center;
-  gap: 4px; /* 👈 글자와 화살표 사이 간격 조절 */
+  gap: 6px; /* 👈 글자와 화살표 사이 간격 조절 */
 }
+.m01-item01, .m01-item02 {
+  padding-bottom: 10px; padding-top: 10px;
+  padding-left: 16px; padding-right: 14px;
+}
+.m01-item03, .m01-item04, .m01-item05, .m01-item06 {
+  padding-bottom: 10px; padding-top: 10px;
+  padding-left: 16px; padding-right: 18px;
+}
+
 .m01-item07 {
-  color: #EFF0F2;
-  text-align: center;
+  width: 1px;
+  height: 24px;
+  background-color: #EFF0F2; /* 선 색상 */ 
+  margin: 0 12px; /* 좌우 메뉴들과의 간격 */
+  align-self: center; /* flex 레이아웃 안에서 수직 가운데 정렬 */
 }
+.m01-item08 {
+  padding-bottom: 10px; padding-top: 10px;
+  padding-left: 16px; padding-right: 16px;
+}
+
+
+
+
+
+
 /* 상단바-탑바-유저 */
 .top-bar-rt {
   display: flex;
@@ -113,7 +145,7 @@
   font-size: var(--font-size-14, 14px);
   font-style: normal;
   font-weight: var(--font-weight-500, 500);
-  line-height: var(--line-height-20, 20px); 142.857%
+  line-height: var(--line-height-20, 20px); 
 }
 .log-in:hover {
   background: var(--color-azure-405, rgba(88, 98, 118, 0.05));
@@ -121,10 +153,9 @@
 }
 
  
-.user-box > a {
+.btn-join > a {
   border-radius: 8px;
   background: var(--color-cyan-44, #21AFBF);
-  color: aliceblue;
   padding-bottom: 10px; padding-top: 10px;
   padding-left: 16px; padding-right: 16px;
 
@@ -208,5 +239,11 @@
   color: #21AFBF;
   padding-bottom: 14px; padding-top: 14px;
   padding-left: 24px; padding-right: 24px;
+}
 
+.btn-join:hover a {
+
+  background : var(--color-cyan-44, #78b9c0);
+  color: aliceblue;
+  border-radius: 8px;
 }
