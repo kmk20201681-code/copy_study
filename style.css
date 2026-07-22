@@ -23,6 +23,7 @@
   font-style: normal;
   font-weight: var(--font-weight-500, 500);
   line-height: var(--line-height-20, 20px); /* 142.857% */
+  position: relative;
 }
 .ut-m01-item:hover {
   background: var(--color-azure-405, rgba(88, 98, 118, 0.05));
@@ -31,6 +32,55 @@
 .ut-m01-item01 {
   background-color: #fff;
 }
+
+
+/* 상단_ 유틸리티바 : 말풍선  */
+.tooltip-box {
+  position: absolute;
+  /* display: flex; */
+  /* display: inline-block; */
+  bottom: -40px; left: 50%; transform: translateX(-50%);
+
+  background-color: #333;
+  border-radius: 10px;
+  color: #fff;
+  /* 줄바꿈 방지 */
+  white-space: nowrap;
+  padding: 12px 20px ;
+  font-size: 12px;
+  line-height: 1.2;
+
+  /* 숨김 처리 및 애니메이션 준비 */
+  transition: 0.2s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 100;
+}
+
+.ut-m01-item:hover .tooltip-box {
+  /* 마우스 올렸을 때 나타나기 */
+  opacity: 1;
+  visibility: visible; 
+}
+
+.tooltip-box::after {
+  content:  "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent;
+
+  /* 크기 0으로 고정 */
+  width: 0;
+  height: 0;
+
+}
+
+
 
 
 
@@ -88,16 +138,32 @@
   background: var(--color-azure-405, rgba(88, 98, 118, 0.05));
   border-radius: 8px;
 }
+
+
+
 /* 🌟  [여기 수정] 글자 링크 태그 자체를 flex로 만듭니다 */
 .m01-item > a {
   display: inline-flex;
   align-items: center;
   gap: 6px; /* 👈 글자와 화살표 사이 간격 조절 */
 }
+
+.m01-item01 {
+  position: relative; /* 2차 메뉴가 1차 메뉴 바로 아래에 뜨도록 기준점 역할 */
+}
+/* .m01-item01 마우스 호버 시 2차 메뉴 (표시) */
+.m01-item01:hover .container02 {
+  display: block;     /* 화면에 보이게 변경 */
+}
+
 .m01-item01, .m01-item02 {
   padding-bottom: 10px; padding-top: 10px;
   padding-left: 16px; padding-right: 14px;
 }
+
+
+
+
 .m01-item03, .m01-item04, .m01-item05, .m01-item06 {
   padding-bottom: 10px; padding-top: 10px;
   padding-left: 16px; padding-right: 18px;
@@ -113,6 +179,86 @@
 .m01-item08 {
   padding-bottom: 10px; padding-top: 10px;
   padding-left: 16px; padding-right: 16px;
+}
+
+/* 상단바- 2차 메뉴 박스 *//* 1. 상단바- 2차 메뉴 전체 박스 */
+.container02 {
+  display: none;      /* 화면에서 아예 숨김 */
+  position: absolute; /* 1차 메뉴를 기준으로 위치 잡기 */
+  top: 100%;          /* 1차 메뉴의 바로 아래에 위치 */
+  left: 0;            /* 왼쪽 정렬 */
+  z-index: 100;       /* 다른 요소들보다 위에 나타나도록 설정 */
+}
+
+/* 1차 메뉴 호버 시 2차 메뉴 노출 (이전 질문 참고용) */
+.m01-item01:hover .container02 {
+  display: flex; /* 화면에 나타나게 함 */
+}
+
+/* 2. 2차 메뉴 내부 디자인 (Flex 레이아웃) */
+.menu02 {
+  display: flex; 
+  width: 1000px; /* 메뉴 전체 너비 */
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  gap: 32px; /* 3개의 왼쪽 카테고리와 오른쪽 박스 사이의 간격을 한 번에 제어 */
+}
+
+/* 3. 왼쪽 카테고리 영역 (총 3개) */
+.left-sc {
+  flex: 1; /* 3개의 카테고리가 남은 공간을 동일한 비율로 나눠 가짐 */
+}
+
+.left-sc h4 {
+  font-size: 13px;
+  color: #C6C8D0;
+  margin: 0 0 16px 0; 
+  font-weight: bold;
+  text-align: left;
+}
+
+/* 4. 왼쪽 메뉴 리스트 */
+.menu02-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; 
+  gap: 8px; 
+  text-align: left;
+}
+
+/* 💡 [수정됨] li 클래스명 대신 ul 안의 a 태그를 한 번에 선택합니다. */
+.menu02-ul a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  padding: 8px 8px; 
+  border-radius: 8px; 
+  transition: background-color 0.2s ease; 
+}
+
+.menu02-ul a:hover {
+  background-color: #f5f6f8; 
+}
+
+/* 5. 오른쪽 영역 */
+.right-sc {
+  width: 320px; /* 오른쪽 영역의 고정 너비 (필요에 따라 조절) */
+  border-left: 1px solid #eee; /* 왼쪽 영역들과 나누는 세로선 */
+  padding-left: 32px; /* 선과 오른쪽 글씨 사이의 간격 */
+
+}
+
+.right-sc h4 {
+  font-size: 13px;
+  color: #C6C8D0;
+  margin: 0 0 16px 0; 
+  font-weight: bold;
+  text-align: left;
 }
 
 
@@ -131,6 +277,7 @@
   display: flex;
   align-self: center;
   padding-right: 56px;
+  gap: 8px;
 }
 .log-in {
   padding-bottom: 10px; padding-top: 10px;
@@ -172,6 +319,13 @@
 }
 
 
+.btn-join:hover a {
+
+  background : var(--color-cyan-44, #78b9c0);
+  color: aliceblue;
+  border-radius: 8px;
+
+}
 
 
 /* 홈페이지 메인  */
@@ -222,28 +376,69 @@
   gap: 15px;
 }
 
+.main01 {
+  border: 1px solid red;
+  height: 100vh;
+}
+
+
 
 /* 홈페이지 메인 - 메인버튼 */
 .mnbt-start {
-  border-radius: 8px;
+  border-radius: 12px;
   background: var(--color-cyan-44, #21AFBF);
   color: aliceblue;
-  padding-bottom: 15px; padding-top: 15px;
-  padding-left: 50px; padding-right: 50px;
+padding-bottom: 12px; padding-top: 12px;
+  padding-left: 51px; padding-right: 51px;
+  
+  /* 글씨체 */
+  color: var(--beautyofjoseon-co-kr-white, var(--pc-category-bg-color, #FFF));
+  text-align: center;
+  font-family: "Pretendard";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 144.444% */
 
 }
 .mnbt-template {
-  border-radius: 8px;
+  border-radius: 12px;
   border: var(--stroke-weight-1, 1px) solid var(--color-cyan-44, #21AFBF);
   background: var(--pc-category-bg-color, #FFF);
-  color: #21AFBF;
-  padding-bottom: 14px; padding-top: 14px;
-  padding-left: 24px; padding-right: 24px;
+  color: var(--www-miricanvas-com-eastern-blue, var(--color-cyan-37, #1C95A2));
+  padding-bottom: 15px; padding-top: 15px;
+  padding-left: 44px; padding-right: 44px;
+
+  /* 글씨체 */
+  text-align: center;
+  font-family: "Pretendard";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 144.444% */
+
 }
 
-.btn-join:hover a {
 
-  background : var(--color-cyan-44, #78b9c0);
-  color: aliceblue;
-  border-radius: 8px;
+.main02 {
+  border: 1px solid orange;
+}
+
+.main03 {
+  border: 1px solid green;
+}
+
+
+.main04 {
+  border: 1px solid blue;
+}
+
+
+.main05 {
+  border: 1px solid purple;
+}
+
+
+.main06 {
+  border: 1px solid black;
 }
