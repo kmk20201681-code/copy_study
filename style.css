@@ -15,6 +15,8 @@
 .ut-m01-item {
   padding-bottom: 6px; padding-top: 6px;
   padding-left: 12px; padding-right: 12px;
+
+  /* 글씨체 */
   color: var(--www-miricanvas-com-shark, var(--color-grey-15, #23242A));
   text-align: center;
   /* www.miricanvas.com/Pretendard Variable/Medium */
@@ -106,10 +108,21 @@
   /* border: 1px solid green; */
   align-self: center;
 }
-.logo-box img {
-  width: 140px;  /* 가로 크기 (원하는 픽셀 값이나 %로 조절) */
-  height: auto;  /* 세로 크기는 가로 비율에 맞춰 자동으로 조절되게 합니다 */
+/* 수정된 로고 CSS */
+.logo-box a {
+  display: block; /* a 태그의 인라인 성질을 없애서 이미지 핏에 딱 맞춤 */
 }
+
+.logo-box img {
+  /* width: 140px;  가로 크기 (원하는 픽셀 값이나 %로 조절)
+  height: auto;  세로 크기는 가로 비율에 맞춰 자동으로 조절되게 합니다 */
+  /* width: 140px; 대신 실제 미리캔버스처럼 높이(height) 기준으로 맞추는 것이 더 안정적입니다. */
+  height: auto; 
+  width: auto;
+  align-items: center;
+  display: block; /* 이미지 하단의 미세한 여백 완벽 제거 */
+}
+
 
 
 /* 상단바-탑바-메뉴 */
@@ -162,11 +175,9 @@
 }
 
 
-
-
 .m01-item03, .m01-item04, .m01-item05, .m01-item06 {
   padding-bottom: 10px; padding-top: 10px;
-  padding-left: 16px; padding-right: 18px;
+  padding-left: 16px; padding-right: 16px;
 }
 
 .m01-item07 {
@@ -348,14 +359,14 @@
 }
 
 .main-text01 {
-  text-align: center;
   color: var(--www-miricanvas-com-woodsmoke, var(--color-azure-10, #16181D));
   text-align: center;
-  font-family: "Pretendard Variable";
+  font-family: "Pretendard";
   font-size: 64px;
   font-style: normal;
   font-weight: 700;
   line-height: 96px; /* 150% */
+  
 }
 
 .main-text02 {
@@ -364,7 +375,7 @@
   /* 글씨체 */
   color: var(--www-miricanvas-com-woodsmoke, var(--color-azure-10, #16181D));
   text-align: center;
-  font-family: "Pretendard Variable";
+  font-family: "Pretendard";
   font-size: 24px;
   font-style: normal; 
   font-weight: 600;
@@ -377,7 +388,7 @@
 }
 
 .main01 {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 100vh;
 }
 
@@ -387,9 +398,9 @@
 .mnbt-start {
   border-radius: 12px;
   background: var(--color-cyan-44, #21AFBF);
-  color: aliceblue;
-padding-bottom: 12px; padding-top: 12px;
+  padding-bottom: 12px; padding-top: 12px;
   padding-left: 51px; padding-right: 51px;
+  display: flex; align-items: center; justify-content: center;
   
   /* 글씨체 */
   color: var(--beautyofjoseon-co-kr-white, var(--pc-category-bg-color, #FFF));
