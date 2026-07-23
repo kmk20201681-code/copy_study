@@ -107,6 +107,7 @@
 .logo-box {
   /* border: 1px solid green; */
   align-self: center;
+  
 }
 /* 수정된 로고 CSS */
 .logo-box a {
@@ -120,6 +121,7 @@
   height: auto; 
   width: auto;
   align-items: center;
+  fill: none;
   display: block; /* 이미지 하단의 미세한 여백 완벽 제거 */
 }
 
@@ -211,10 +213,10 @@
   display: flex; 
   width: 1000px; /* 메뉴 전체 너비 */
   background-color: #ffffff;
-  padding: 32px;
+  padding: 22px;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  gap: 32px; /* 3개의 왼쪽 카테고리와 오른쪽 박스 사이의 간격을 한 번에 제어 */
+  gap: 22px; /* 3개의 왼쪽 카테고리와 오른쪽 박스 사이의 간격을 한 번에 제어 */
 }
 
 /* 3. 왼쪽 카테고리 영역 (총 3개) */
@@ -233,7 +235,7 @@
 /* 4. 왼쪽 메뉴 리스트 */
 .menu02-ul {
   list-style: none;
-  padding: 0;
+  padding: 10px 12px;
   margin: 0;
   display: flex;
   flex-direction: column; 
@@ -259,7 +261,7 @@
 /* 5. 오른쪽 영역 */
 .right-sc {
   width: 320px; /* 오른쪽 영역의 고정 너비 (필요에 따라 조절) */
-  border-left: 1px solid #eee; /* 왼쪽 영역들과 나누는 세로선 */
+  border-left: 1px solid #eee; 왼쪽 영역들과 나누는 세로선
   padding-left: 32px; /* 선과 오른쪽 글씨 사이의 간격 */
 
 }
@@ -272,6 +274,12 @@
   text-align: left;
 }
 
+.rsc01-img-box > img {
+  width: 380px;
+  height: 280px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
 
 
 
@@ -350,7 +358,8 @@
   align-items: center;
   gap: 40px;
   /* background-color: antiquewhite; */
-}
+  
+} 
 
 .main-text-box {
   display: flex;
